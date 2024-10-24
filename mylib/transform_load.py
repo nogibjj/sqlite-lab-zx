@@ -21,7 +21,8 @@ def load(dataset="/workspaces/sqlite-lab-zx/data/Grocery.csv"):
         
         # Drop the table if it exists and create a new one
         c.execute("DROP TABLE IF EXISTS GroceryDB")
-        c.execute("CREATE TABLE GroceryDB (id INTEGER PRIMARY KEY AUTOINCREMENT, general_name TEXT, "
+        c.execute("CREATE TABLE GroceryDB (id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                  "general_name TEXT, "
                   "count_products INTEGER, ingred_FPro TEXT, avg_FPro_products REAL, "
                   "avg_distance_root REAL, ingred_normalization_term TEXT, "
                   "semantic_tree_name TEXT, semantic_tree_node TEXT)")
@@ -40,8 +41,10 @@ def load(dataset="/workspaces/sqlite-lab-zx/data/Grocery.csv"):
                 semantic_tree_node = row[7]
 
                 # Insert into the database
-                c.execute("INSERT INTO GroceryDB (general_name, count_products, ingred_FPro, "
-                          "avg_FPro_products, avg_distance_root, ingred_normalization_term, "
+                c.execute("INSERT INTO GroceryDB (general_name, count_products, "
+                          "ingred_FPro, "
+                          "avg_FPro_products, avg_distance_root, "
+                          "ingred_normalization_term, "
                           "semantic_tree_name, semantic_tree_node) "
                           "VALUES (?, ?, ?, ?, ?, ?, ?, ?)", 
                           (general_name, count_products, ingred_FPro, 
