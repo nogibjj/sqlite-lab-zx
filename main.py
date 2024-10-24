@@ -15,18 +15,19 @@ from mylib.query import (
 )
 
 def main():
-    # Example usage of the functions
-    conn = connect_db()
+    # Extract the data
+    file_path = extract()  # Call the extract function
 
-    # Create data (example values, now without id)
-    sample_data = ("Apple", 50, "FPro1", 12.5, 0.5, "Norm1", "Tree1", "Node1")
-    create_data(conn, sample_data)
+    # Load the extracted data into the database
+    conn = connect_db()
+    load(file_path)  # Call the load function
 
     # Read data
     read_data(conn)
 
-    # Update data
-    update_data(conn, 100, 1)  # Example: update the count_products to 100 where id is 1
+    # Create data (example values, now without id)
+    sample_data = ("Apple", 50, "FPro1", 12.5, 0.5, "Norm1", "Tree1", "Node1")
+    create_data(conn, sample_data)
 
     # Query specific data
     query_apple(conn)
@@ -34,11 +35,11 @@ def main():
     # Query average count_products
     query_average_count(conn)
 
-    # Delete data
-    delete_data(conn, 1)  # Example: delete the record where id is 1
+    # Delete data (optional)
+    # delete_data(conn, 1)  # Example: delete the record where id is 1
 
     conn.close()
 
-
 if __name__ == "__main__":
     main()
+
