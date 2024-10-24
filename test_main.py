@@ -2,7 +2,6 @@
 Test for the database operations in the GroceryDB
 """
 
-import sqlite3
 import pytest
 from mylib.query import connect_db, create_data, read_data, delete_data
 
@@ -13,7 +12,8 @@ def setup_database():
     conn = connect_db("test_GroceryDB.db")
 
     # Create a table for testing
-    conn.execute("CREATE TABLE GroceryDB (id INTEGER PRIMARY KEY AUTOINCREMENT, general_name TEXT, "
+    conn.execute("CREATE TABLE GroceryDB (id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 "general_name TEXT, "
                  "count_products INTEGER, ingred_FPro TEXT, avg_FPro_products REAL, "
                  "avg_distance_root REAL, ingred_normalization_term TEXT, "
                  "semantic_tree_name TEXT, semantic_tree_node TEXT)")
