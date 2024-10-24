@@ -9,7 +9,6 @@ This project implements an ETL (Extract, Transform, Load) process for a grocery 
 
 ## Project Structure
 
-.
 ├── Makefile
 ├── main.py
 ├── mylib
