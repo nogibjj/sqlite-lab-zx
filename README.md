@@ -1,12 +1,11 @@
 # Grocery Database ETL and Query Project
 [![CI](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml)
-
 ## Project Overview
 
 This project implements an ETL (Extract, Transform, Load) process for a grocery dataset and provides functionalities to query the data stored in a SQLite database. The project consists of several modules that handle data extraction from a CSV file, transformation, loading into a database, and querying the database for information.
 
 ## Project Structure
-
+```
 ├── Makefile
 ├── main.py
 ├── mylib
@@ -15,7 +14,7 @@ This project implements an ETL (Extract, Transform, Load) process for a grocery 
 │   ├── query.py
 │   └── transform_load.py
 └── test_main.py
-
+```
 - **Makefile**: Contains commands for linting and testing the project.
 - **main.py**: The main script that orchestrates the ETL process and querying functionalities.
 - **mylib/**: Contains the main modules for extracting, transforming, loading, and querying data.
