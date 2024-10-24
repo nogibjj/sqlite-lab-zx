@@ -10,13 +10,13 @@ def connect_db(db_name="GroceryDB.db"):
 
 
 def create_data(conn, data):
-    """Insert data into the GroceryDB table."""
+    """Insert data into the GroceryDB table, excluding the id."""
     cursor = conn.cursor()
     cursor.execute(
-        "INSERT INTO GroceryDB (id, general_name, count_products, "
+        "INSERT INTO GroceryDB (general_name, count_products, "
         "ingred_FPro, avg_FPro_products, avg_distance_root, "
         "ingred_normalization_term, semantic_tree_name, semantic_tree_node) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?)", 
         data
     )
     conn.commit()
