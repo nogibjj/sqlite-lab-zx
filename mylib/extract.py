@@ -12,11 +12,13 @@ def extract(
         "GroceryDB_IgFPro.csv", 
     file_path="data/Grocery.csv"
 ):
-    """Extract a url to a file path"""
+
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
     with requests.get(url) as r:
         with open(file_path, 'wb') as f:
             f.write(r.content)
+    
     df = pd.read_csv(file_path)
     df_sub = df.head(66)
     df_sub.to_csv(file_path, index=False)
