@@ -3,6 +3,7 @@ Extract a dataset from a URL
 
 food dataset
 """
+import os
 import requests
 import pandas as pd
 
@@ -12,6 +13,7 @@ def extract(
     file_path="data/Grocery.csv"
 ):
     """Extract a url to a file path"""
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with requests.get(url) as r:
         with open(file_path, 'wb') as f:
             f.write(r.content)
