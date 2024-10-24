@@ -19,8 +19,9 @@ def load(dataset="/workspaces/sqlite-lab-zx/data/Grocery.csv"):
     conn = sqlite3.connect('GroceryDB.db')
     c = conn.cursor()
     c.execute("DROP TABLE IF EXISTS GroceryDB")
-    c.execute("CREATE TABLE GroceryDB (id INT PRIMARY KEY,general_name, count_products," 
-              "ingred_FPro, avg_FPro_products, avg_distance_root, ingred_normalization_term,"
+    c.execute("CREATE TABLE GroceryDB (id INT PRIMARY KEY,general_name,"
+              "count_products, ingred_FPro, avg_FPro_products," 
+              "avg_distance_root, ingred_normalization_term,"
               "semantic_tree_name, semantic_tree_node)")
     #insert
     c.executemany("INSERT INTO GroceryDB VALUES (?,?, ?, ?, ?, ?, ?, ?, ?)", payload)
