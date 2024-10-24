@@ -12,10 +12,13 @@ def connect_db(db_name="GroceryDB.db"):
 def create_data(conn, data):
     """Insert data into the GroceryDB table."""
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO GroceryDB (id, general_name, count_products, 
-                    ingred_FPro, avg_FPro_products, avg_distance_root,
-                    ingred_normalization_term, semantic_tree_name, semantic_tree_node) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", data)
+    cursor.execute(
+        "INSERT INTO GroceryDB (id, general_name, count_products, "
+        "ingred_FPro, avg_FPro_products, avg_distance_root, "
+        "ingred_normalization_term, semantic_tree_name, semantic_tree_node) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+        data
+    )
     conn.commit()
     print("Data inserted successfully!")
 
@@ -34,8 +37,10 @@ def read_data(conn):
 def update_data(conn, new_value, item_id):
     """Update the count_products value of a record in GroceryDB."""
     cursor = conn.cursor()
-    cursor.execute("UPDATE GroceryDB SET count_products = ? WHERE id = ?", 
-                   (new_value, item_id))
+    cursor.execute(
+        "UPDATE GroceryDB SET count_products = ? WHERE id = ?", 
+        (new_value, item_id)
+    )
     conn.commit()
     print(f"Record with ID {item_id} updated successfully!")
 
@@ -96,5 +101,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
