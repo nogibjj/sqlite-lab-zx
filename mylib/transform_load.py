@@ -22,7 +22,6 @@ def load(dataset="data/Grocery.csv"):  # 修改为相对路径
     payload = csv.reader(open(dataset, newline=''), delimiter=',')
     conn = sqlite3.connect('GroceryDB.db')
     c = conn.cursor()
-    # 修改创建表的 SQL 语句
     c.execute("DROP TABLE IF EXISTS GroceryDB")
     c.execute("CREATE TABLE GroceryDB (id INTEGER PRIMARY KEY AUTOINCREMENT, "
               "general_name TEXT, count_products INT, ingred_FPro TEXT, "
