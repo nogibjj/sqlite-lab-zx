@@ -10,12 +10,10 @@ def extract(
 
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-    # 下载数据
     with requests.get(url) as r:
         with open(file_path, 'wb') as f:
             f.write(r.content)
     
-    # 检查文件是否成功创建
     if os.path.isfile(file_path):
         print(f"File successfully created at: {file_path}")
     else:
