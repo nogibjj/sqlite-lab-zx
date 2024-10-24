@@ -1,7 +1,5 @@
-## SQLite Lab
-[![CI](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml)
-
 # Grocery Database ETL and Query Project
+[![CI](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml)
 
 ## Project Overview
 
