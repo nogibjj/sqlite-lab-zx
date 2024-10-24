@@ -18,7 +18,6 @@ This project implements an ETL (Extract, Transform, Load) process for a grocery 
 │   ├── query.py
 │   └── transform_load.py
 └── test_main.py
-```
 
 - **Makefile**: Contains commands for linting and testing the project.
 - **main.py**: The main script that orchestrates the ETL process and querying functionalities.
@@ -91,6 +90,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## Acknowledgments
 
 - Thank you to all contributors and libraries that made this project possible.
-```
+
 
 Feel free to modify any sections to better fit your project's specifics or add additional information as needed!
