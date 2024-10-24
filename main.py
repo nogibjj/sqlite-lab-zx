@@ -29,17 +29,21 @@ def main():
     sample_data = ("Apple", 50, "FPro1", 12.5, 0.5, "Norm1", "Tree1", "Node1")
     create_data(conn, sample_data)
 
+    # Update data (example: updating count_products for Apple)
+    update_data(conn, 100, 1)  # Update the count_products to 100 where id is 1
+
     # Query specific data
     query_apple(conn)
 
     # Query average count_products
     query_average_count(conn)
 
-    # Delete data (optional)
-    # delete_data(conn, 1)  # Example: delete the record where id is 1
+    # Delete data (example: deleting the record with id 1)
+    delete_data(conn, 1)  # Example: delete the record where id is 1
 
     conn.close()
 
 if __name__ == "__main__":
     main()
+
 
