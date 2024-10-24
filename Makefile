@@ -5,8 +5,8 @@ install:
 test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
-format:	
-	black *.py 
+format:
+	black *.py
 
 lint:
 	#disable comment to test speed
@@ -21,5 +21,5 @@ refactor: format lint
 
 deploy:
 	#deploy goes here
-		
+
 all: install lint test format deploy
