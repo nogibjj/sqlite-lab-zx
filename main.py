@@ -15,21 +15,11 @@ from mylib.query import (
 )
 
 def main():
-    # Extract
-    print("Extracting data...")
-    extract()
-
-    # Transform and load
-    print("Transforming data...")
-    load()
-
-    # Query operations
-    print("Querying data...")
-    
+    # Example usage of the functions
     conn = connect_db()
 
-    # Create data (example values)
-    sample_data = (1, "Apple", 50, "FPro1", 12.5, 0.5, "Norm1", "Tree1", "Node1")
+    # Create data (example values, now without id)
+    sample_data = ("Apple", 50, "FPro1", 12.5, 0.5, "Norm1", "Tree1", "Node1")
     create_data(conn, sample_data)
 
     # Read data
@@ -48,6 +38,7 @@ def main():
     delete_data(conn, 1)  # Example: delete the record where id is 1
 
     conn.close()
+
 
 if __name__ == "__main__":
     main()
