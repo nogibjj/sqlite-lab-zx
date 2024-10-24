@@ -81,14 +81,3 @@ make lint
 ```
 
 This command will use `ruff` for linting the code.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## Acknowledgments
-
-- Thank you to all contributors and libraries that made this project possible.
-
-
-Feel free to modify any sections to better fit your project's specifics or add additional information as needed!
