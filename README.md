@@ -6,22 +6,48 @@ This project implements an ETL (Extract, Transform, Load) process for a grocery 
 
 ## Project Structure
 ```
-├── Makefile
-├── main.py
+├── .devcontainer
+│ ├── Dockerfile
+│ └── devcontainer.json
+├── .github
+│ └── workflows
+│ └── cicd.yml
 ├── mylib
-│   ├── __init__.py
-│   ├── extract.py
-│   ├── query.py
-│   └── transform_load.py
+│ ├── init.py
+│ ├── extract.py
+│ ├── query.py
+│ └── transform_load.py
+├── .gitignore
+├── Dockerfile
+├── GroceryDB.db
+├── LICENSE
+├── Makefile
+├── README.md
+├── main.py
+├── requirements.txt
+├── setup.sh
 └── test_main.py
 ```
-- **Makefile**: Contains commands for linting and testing the project.
-- **main.py**: The main script that orchestrates the ETL process and querying functionalities.
-- **mylib/**: Contains the main modules for extracting, transforming, loading, and querying data.
+- **.devcontainer/**: Contains configuration for development container.
+  - **Dockerfile**: Defines the environment setup.
+  - **devcontainer.json**: Configuration for VS Code remote development.
+
+- **.github/workflows/**: Contains CI/CD pipeline configurations.
+  - **cicd.yml**: Defines the GitHub Actions workflow.
+
+- **mylib/**: Library modules for the project.
   - **extract.py**: Responsible for extracting data from a CSV file.
-  - **transform_load.py**: Handles the transformation of the data and loading it into a SQLite database.
   - **query.py**: Contains functions to query the database.
+  - **transform_load.py**: Handles data transformation and loading into a SQLite database.
+
+- **Makefile**: Contains commands for installation, linting, testing, and deployment.
+- **main.py**: The main script that orchestrates the ETL process and querying functionalities.
 - **test_main.py**: Contains tests for the database operations.
+- **GroceryDB.db**: SQLite database file.
+- **requirements.txt**: Lists Python dependencies.
+- **setup.sh**: Script for setting up the environment.
+- **Dockerfile**: Used for building Docker images.
+- **README.md**: Documentation and instructions for the project.
 
 ## Installation
 
