@@ -1,7 +1,6 @@
 ## SQLite Lab
 [![CI](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/sqlite-lab-zx/actions/workflows/cicd.yml)
 
-```markdown
 # Grocery Database ETL and Query Project
 
 ## Project Overview
@@ -10,7 +9,6 @@ This project implements an ETL (Extract, Transform, Load) process for a grocery 
 
 ## Project Structure
 
-```
 .
 ├── Makefile
 ├── main.py
